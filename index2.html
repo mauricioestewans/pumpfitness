@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>Pump Fitness - Suplementos Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#b91c1c',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .gradient-text { background: linear-gradient(to right, #dc2626, #f87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .whatsapp-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body class="bg-zinc-900 text-white min-h-screen">
+    <!-- Aviso Legal Fixo -->
+    <div class="bg-red-800 text-center p-2 text-sm">
+        ⚠️ O uso desse tipo de medicação, requer acompanhamento especializado.
+    </div>
+<body class="bg-zinc-900 text-white min-h-screen">
+    <!-- Navbar Simplificada -->
+    <nav class="border-b border-zinc-800 px-4 py-3 sticky top-0 bg-zinc-900 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-xl font-bold gradient-text">PUMP FITNESS</a>
+            <div class="flex items-center space-x-6">
+                <a href="#products" class="hover:text-primary transition">Produtos</a>
+                <a href="#benefits" class="hover:text-primary transition">Vantagens</a>
+                <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Aprimorada -->
+    <section class="py-24 px-4 bg-gradient-to-b from-zinc-800 to-zinc-900">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-6xl md:text-7xl font-bold mb-6 animate-fade-in">
+                    <span class="gradient-text">Performance</span> Máxima
+                </h1>
+                <p class="text-xl text-zinc-300 mb-8">Suplementação premium para resultados extraordinários</p>
+                <a href="https://wa.me/5547988891448" target="_blank" class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 transition whatsapp-pulse">
+                    <i class="fab fa-whatsapp mr-2"></i>Fale com nossos especialistas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção USP -->
+    <section class="py-20 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 reveal">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="text-xl font-bold mb-2">Segurança Total</h3>
+                <p class="text-zinc-300">Produtos originais com certificação de qualidade</p>
+            </div>
+            <div class="text-center p-6 reveal">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-shipping-fast"></i></div>
+                <h3 class="text-xl font-bold mb-2">Entrega Expressa</h3>
+                <p class="text-zinc-300">Entregamos em todo Brasil</p>
+            </div>
+            <div class="text-center p-6 reveal">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-headset"></i></div>
+                <h3 class="text-xl font-bold mb-2">Suporte Expert</h3>
+                <p class="text-zinc-300">Acompanhamento com profissionais especializados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section id="benefits" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Por que escolher a <span class="gradient-text">Pump Fitness</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="text-primary text-2xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold mb-2">Qualidade Comprovada</h3>
+                    <p class="text-zinc-300">Parceria com os melhores laboratórios do mercado, garantindo padrões farmacêuticos internacionais</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="text-primary text-2xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold mb-2">Privacidade Total</h3>
+                    <p class="text-zinc-300">Embalagem discreta e neutra, sem qualquer identificação do conteúdo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="products" class="py-20 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Nossos <span class="gradient-text">Produtos</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testenat 250mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="testnat.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Testenat 250mg (Lander Gold)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 250mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 199,00</p>
+                </div>
+
+                <!-- Durateston 10ml -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="durateston.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Durateston 10ml (Lander Gold)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">Mix de ésteres - 250mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 199,00</p>
+                </div>
+
+                <!-- Diana oral 10ml -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="dianabol.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Diana oral (Pharmacom)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">100cp - 10mg</p>
+                    <p class="text-primary font-bold text-xl">R$ 190,00</p>
+                </div>
+
+                <!-- Clembuterol -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="clenbuterol.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Clembuterol (Pharmacom)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">100cp - 40mg</p>
+                    <p class="text-primary font-bold text-xl">R$ 190,00</p>
+                </div>
+
+                <!-- Boldenona 250mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="boldenona.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Boldenona 250mg (Lander Gold)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 250mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 199,00</p>
+                </div>
+
+                <!-- Masteron Proprionato -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="masteron.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Masteron Proprionato 100mg (King Pharma)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 100mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 199,00</p>
+                </div>
+
+                <!-- Primobolan 100mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="primobolan.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Primobolan 100mg (Lander Gold)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 100mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 409,00</p>
+                </div>
+
+                <!-- Tritrembo 200mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="tritrembo.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Tritrembo 200mg (Lander Gold)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 200mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 370,00</p>
+                </div>
+
+                <!-- Proviron -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="Proviron.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Proviron (King Pharma)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">20cp - 25mg</p>
+                    <p class="text-primary font-bold text-xl">R$ 110,00</p>
+                </div>
+
+                <!-- Testex 250mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="testex.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Testex (King Pharma)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 250mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 159,00</p>
+                </div>
+
+                <!-- Deca Durabolin 300mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="deca durabolin.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Deca Durabolin 300mg (King Pharma)</h3>
+                    <p class="text-zinc-300 text-sm mb-4">10ml - 300mg/ml</p>
+                    <p class="text-primary font-bold text-xl">R$ 149,00</p>
+                </div>
+
+                <!-- Estano 10mg -->
+                <div class="bg-zinc-900 rounded-xl p-6 relative reveal">
+                    <img src="estano.jpg" alt="">
+                    <div class="h-35 bg-zinc-700 rounded-xl mb-4"></div>
+                    <h3 class="text-xl font-bold mb-2">Estanozolol 10mg</h3>
+                    <p class="text-zinc-300 text-sm mb-4">100 comprimidos - 10mg (King Pharma)</p>
+                    <p class="text-primary font-bold text-xl">R$ 90,00</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+
+    <!-- Seção Depoimentos Ampliada -->
+    <section id="testimonials" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Quem usa <span class="gradient-text">recomenda</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <p class="text-sm text-zinc-400">Atleta Profissional</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Resultados incríveis em pouco tempo, atendimento diferenciado!"</p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Ana Costa</h4>
+                            <p class="text-sm text-zinc-400">Fisiculturista</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Qualidade premium e entrega super rápida. Recomendo!"</p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Ricardo Almeida</h4>
+                            <p class="text-sm text-zinc-400">Coach Esportivo</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Melhor custo-benefício do mercado, produtos originais."</p>
+                </div>
+
+                <!-- Depoimento 4 -->
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Fernanda Lima</h4>
+                            <p class="text-sm text-zinc-400">Atleta Fitness</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Atendimento personalizado e discreto, exatamente o que precisava."</p>
+                </div>
+
+                <!-- Depoimento 5 -->
+                <div class="bg-zinc-800 p-8 rounded-xl reveal">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Marcos Oliveira</h4>
+                            <p class="text-sm text-zinc-400">Praticante de CrossFit</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Produtos de altíssima qualidade e suporte especializado 24h."</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Seção CTA Final -->
+    <section class="py-20 px-4 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Pronto para evoluir?</h2>
+            <p class="text-xl mb-8">Fale agora mesmo com um de nossos especialistas</p>
+            <a href="https://wa.me/5547988891448" target="_blank" class="inline-block bg-white text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition">
+                <i class="fab fa-whatsapp mr-2"></i>Iniciar Conversa
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="py-12 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-zinc-400 mb-4">© 2024 Pump Fitness. Todos os direitos reservados.</p>
+            <p class="text-zinc-500 text-sm">Consulte sempre um profissional de saúde qualificado</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) el.classList.add('active');
+            });
+        }
+        reveal();
+    </script>
+</body>
+</html>

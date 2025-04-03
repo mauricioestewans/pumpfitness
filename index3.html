@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>Pump Fitness - Suplementos Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#dc2626',
+                        secondary: '#b91c1c',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .gradient-text { background: linear-gradient(to right, #dc2626, #f87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .whatsapp-pulse { animation: pulse 2s infinite; }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: translateY(-5px); }
+        .product-image { height: 280px; object-fit: contain; object-position: center; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body class="bg-zinc-900 text-white min-h-screen">
+    <!-- Aviso Legal Fixo -->
+    <div class="bg-red-800 text-center p-2 text-sm sticky top-0 z-50">
+        ⚠️ O uso desse tipo de medicação requer acompanhamento especializado.
+    </div>
+
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-700 px-4 py-3 sticky top-8 bg-zinc-900/80 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-xl font-bold gradient-text hover:text-primary transition">PUMP FITNESS</a>
+            <div class="flex items-center space-x-6">
+                <a href="#products" class="hover:text-primary transition">Produtos</a>
+                <a href="#benefits" class="hover:text-primary transition">Vantagens</a>
+                <a href="#testimonials" class="hover:text-primary transition">Depoimentos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-32 px-4 bg-gradient-to-b from-zinc-800 to-zinc-900">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                    <span class="gradient-text">Performance</span> Máxima
+                </h1>
+                <p class="text-xl text-zinc-300 mb-8">Suplementação premium para resultados extraordinários</p>
+                <a href="https://wa.me/5547988891448" target="_blank" class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-green-600 transition whatsapp-pulse">
+                    <i class="fab fa-whatsapp mr-2"></i>Solicite nosso catálago completo e faça seu pedido
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção USP -->
+    <section class="py-20 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6 reveal hover-scale">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-shield-alt"></i></div>
+                <h3 class="text-xl font-bold mb-2">Segurança Total</h3>
+                <p class="text-zinc-300">Produtos originais com certificação de qualidade</p>
+            </div>
+            <div class="text-center p-6 reveal hover-scale">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-shipping-fast"></i></div>
+                <h3 class="text-xl font-bold mb-2">Entrega Expressa</h3>
+                <p class="text-zinc-300">Entregamos em todo Brasil</p>
+            </div>
+            <div class="text-center p-6 reveal hover-scale">
+                <div class="text-4xl text-primary mb-4"><i class="fas fa-headset"></i></div>
+                <h3 class="text-xl font-bold mb-2">Suporte Expert</h3>
+                <p class="text-zinc-300">Acompanhamento com profissionais especializados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="products" class="py-20 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Nossos <span class="gradient-text">Produtos</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 px-4">
+                <!-- Produtos Padronizados -->
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="testnat.jpg" alt="Testenat 250mg" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Testenat 250mg (Lander Gold)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 250mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 199,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="durateston.jpg" alt="Durateston" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Durateston 10ml (Lander Gold)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">Mix de ésteres - 250mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 199,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="dianabol.jpg" alt="Dianabol" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Diana oral (Pharmacom)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">100cp - 10mg</p>
+                            <p class="text-primary font-bold text-lg">R$ 190,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="clenbuterol.jpg" alt="Clenbuterol" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Clembuterol (Pharmacom)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">100cp - 40mg</p>
+                            <p class="text-primary font-bold text-lg">R$ 190,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="boldenona.jpg" alt="Boldenona" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Boldenona 250mg (Lander Gold)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 250mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 199,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="masteron.jpg" alt="Masteron" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Masteron Proprionato 100mg (King Pharma)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 100mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 199,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="primobolan.jpg" alt="Primobolan" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Primobolan 100mg (Lander Gold)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 100mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 409,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="tritrembo.jpg" alt="Tritrembo" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Tritrembo 200mg (Lander Gold)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 200mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 370,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="proviron.jpg" alt="Proviron" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Proviron (King Pharma)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">20cp - 25mg</p>
+                            <p class="text-primary font-bold text-lg">R$ 110,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="testex.jpg" alt="Testex" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Testex (King Pharma)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 250mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 159,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="deca durabolin.jpg" alt="Deca Durabolin" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Deca Durabolin 300mg (King Pharma)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">10ml - 300mg/ml</p>
+                            <p class="text-primary font-bold text-lg">R$ 149,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-900 rounded-xl p-6 hover-scale relative reveal">
+                    <img src="estano.jpg" alt="Estanozolol" class="product-image w-full mb-4 rounded-lg">
+                    <h3 class="text-lg font-bold mb-2">Estanozolol 10mg (King Pharma)</h3>
+                    <div class="flex justify-between items-end">
+                        <div>
+                            <p class="text-zinc-300 text-sm">100cp - 10mg</p>
+                            <p class="text-primary font-bold text-lg">R$ 90,00</p>
+                        </div>
+                        <button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm hover:bg-primary/30 transition">
+                            Detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="testimonials" class="py-20 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Quem usa <span class="gradient-text">recomenda</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Depoimentos Padronizados -->
+                <div class="bg-zinc-900 p-6 rounded-xl reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Carlos Silva</h4>
+                            <p class="text-sm text-zinc-400">Atleta Profissional</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Resultados incríveis em pouco tempo, atendimento diferenciado!"</p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-xl reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Ana Costa</h4>
+                            <p class="text-sm text-zinc-400">Fisiculturista</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Qualidade premium e entrega super rápida. Recomendo!"</p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-xl reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Ricardo Almeida</h4>
+                            <p class="text-sm text-zinc-400">Coach Esportivo</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Melhor custo-benefício do mercado, produtos originais."</p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-xl reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Fernanda Lima</h4>
+                            <p class="text-sm text-zinc-400">Atleta Fitness</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Atendimento personalizado e discreto, exatamente o que precisava."</p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-xl reveal hover-scale">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-zinc-700 mr-4"></div>
+                        <div>
+                            <h4 class="font-bold">Marcos Oliveira</h4>
+                            <p class="text-sm text-zinc-400">Praticante de CrossFit</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-300">"Produtos de altíssima qualidade e suporte especializado 24h."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center reveal">
+                Perguntas <span class="gradient-text">Frequentes</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- FAQ Items -->
+                <div class="bg-zinc-800 rounded-xl p-6 reveal hover-scale">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-bold">Como é feita a entrega?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-4" id="faq1">
+                        <p class="text-zinc-300">Entregamos em todo Brasil com embalagem discreta via Correios e transportadoras parceiras.</p>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-800 rounded-xl p-6 reveal hover-scale">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-bold">Qual a garantia dos produtos?</h3>
+                        <i class="fas fa-chevron-down text-primary"></i>
+                    </div>
+                    <div class="faq-answer mt-4" id="faq2">
+                        <p class="text-zinc-300">Todos os produtos possuem certificado de autenticidade e garantia de qualidade.</p>
+                    </div>
+                </div>
+
+                <!-- Adicione mais FAQs conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Restante do código permanece igual -->
+
+    <!-- Seção CTA Final -->
+    <section class="py-20 px-4 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Pronto para evoluir?</h2>
+            <p class="text-xl mb-8">Fale agora mesmo com um de nossos especialistas</p>
+            <a href="https://wa.me/5547988891448" target="_blank" class="inline-block bg-white text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition">
+                <i class="fab fa-whatsapp mr-2"></i>Solicite nosso catálago completo e faça seu pedido
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="py-12 px-4 bg-zinc-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-zinc-400 mb-4">© 2024 Pump Fitness. Todos os direitos reservados.</p>
+            <p class="text-zinc-500 text-sm">Consulte sempre um profissional de saúde qualificado</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) el.classList.add('active');
+            });
+        }
+        reveal();
+    </script>
+</body>
+</html>
+
+    <script>
+        // Scroll Reveal
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) el.classList.add('active');
+            });
+        }
+        reveal();
+
+        // FAQ Toggle
+        function toggleFAQ(num) {
+            const answer = document.getElementById(`faq${num}`);
+            const icon = answer.previousElementSibling.querySelector('i');
+            answer.classList.toggle('active');
+            icon.classList.toggle('fa-chevron-up');
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        }
+    </script>
+</body>
+</html>
